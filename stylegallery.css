@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Handlee&display=swap');
+body {
+    font-family: Handlee;
+    margin: 0;
+    padding: 0;
+    background-color: #ff5757;
+}
+
+.dasar {
+    margin: 0 auto;
+}
+
+h2, p {
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: azure;
+}
+
+h2 {
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+p {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+
+.container {
+    background-color: azure;
+    width: 840px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.gallery li {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid #ff5757;
+    float: left;
+    margin: 5px;
+    position: relative;
+}
+
+.gallery li a img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+.gallery li span {
+    color: #ff5757;
+    border-radius: 50%;
+    display: block;
+    width: 120px;
+    height: 120px;
+    background-color: rgba(200, 200, 200, .5);
+    position: absolute;
+    top: 0;
+    text-align: center;
+    line-height: 120px;
+    opacity: 0;
+    transition: .3s;
+
+}
+
+.gallery li a:hover span {
+    opacity: 1;
+}
+
+.gallery li:hover {
+    border: 5px solid #ff5757;
+}
+
+.clear {
+    clear: both;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0);
+    text-align: center;
+    z-index: 15;
+    transition: .5s;
+}
+
+.overlay:target {
+    width: auto;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .8);
+}
+
+.overlay img {
+    height: 500px;
+    width: 500px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, .7);
+    margin: 100px auto;
+}
+
+.overlay .close {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    color: white;
+    text-decoration: none;
+    background-color: black;
+    border: 1px solid white;
+    padding: 5px;
+    border-radius: 50%;
+} 
+
+.next {
+    position: absolute;
+    width: 90px;
+    height: 60px;
+    text-decoration: none;
+    top: 50%;
+    color: white;
+    font-size: 45px;
+}
+
+.prev {
+    position: absolute;
+    width: 90px;
+    height: 60px;
+    text-decoration: none;
+    top: 50%;
+    color: white;
+    font-size: 45px;
+    margin-left: -90px;
+}
+
+@media (max-width : 950px) {
+    .container {
+        width: 420px;
+    }
+
+    .overlay img {
+        height: 270px;
+        width: 270px;
+    }
+
+    .next, .prev{
+        top: 35%;
+    }
+}
+
+@media (max-width : 600px) {
+    .container {
+        width: 140px;
+    }
+}
