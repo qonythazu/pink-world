@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Handlee&display=swap');
+body {
+    font-family: Handlee;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 0 auto;
+    background-color: #ff5757;
+    padding: 0;
+    min-height: 1050px;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+.jumbotron {
+    height: 300px;
+    background: url(geometric-leaves.png);
+    color: #ff5757;
+    text-align: center;
+    line-height: 300px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: brown;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+a.item {
+    padding: 10px;
+    text-decoration: none;
+    color: azure;
+    text-align: center;
+    line-height: 50px;
+    display: block;
+    width: 100px;
+    height: 50px;
+}
+
+a.item:hover {
+    font-weight: bold;
+}
+
+.main {
+    margin: 30px;
+}
+
+section h2, section p {
+    color: azure;
+    margin-left: 50px;
+}
+
+section p {
+    font-size: 20px;
+}
+
+.video {
+    display: flex;
+    justify-content: center;
+}
+
+.video video {
+    width: 750px;
+    border-radius: 10px;
+}
+
+.interest-list {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+}
+
+.interest h1 {
+    color: azure;
+    text-align: center;
+}
+
+.interest p {
+    text-align: left;
+}
+
+.contact-list {
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.contact-list, .feature-list {
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.contact, .feature {
+    border: 1px solid azure;
+    background-color: azure;
+    padding: 30px;
+    flex-grow: 1;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px brown;
+    margin: 0 7px;
+    text-align: center;
+}
+
+.contact p {
+    color: #ff5757;
+    text-align: left;
+}
+
+.contact a, .feature a {
+    text-decoration: none;
+    color: #ff5757;
+}
+
+.contact:hover, .feature:hover {
+    opacity: .8;
+    font-weight: bold;
+}
+
+.contact:active, .feature:active {
+    box-shadow: none;
+}
+
+.footer {
+    padding: 20px;
+    color: white;
+    background-color: brown;
+    text-align: center;
+}
+
+@media (max-width : 900px) {
+    .menu {
+        justify-content: center;
+    }
+    
+    section h2, section p {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .video {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .video video {
+        width: 450px;
+    }
+
+    .interest-list {
+        grid-template-columns: auto auto;
+    }
+
+    .contact-list, .feature-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .contact, .feature {
+        margin: 10px;
+        text-align: center;
+        padding: 35px;
+    }
+}
+
+@media (max-width : 600px) {
+    h1 {
+        font-size: 35px;
+    }
+
+    .video video {
+        width: 350px;
+    }
+
+    .interest-list {
+        grid-template-columns: auto;
+    }
+
+    .contact-list, .feature-list {
+        flex-direction: column;
+    }
+
+    .contact, .feature {
+        padding: 20px;
+    }
+}
