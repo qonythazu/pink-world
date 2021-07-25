@@ -201,4 +201,8 @@ section p {
     h1 { 
         font-size: 20px
     }
+    
+    .video video {
+        width: 250px
+    }
 }
