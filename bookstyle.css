@@ -112,6 +112,7 @@ main {
 
 .search_section > h2 {
     color: #ff5757;
+    margin-right: 2px; 
 }
 
 .search_section > form {
@@ -180,10 +181,12 @@ main {
 .book_shelf > .book_list > .book_item > .action > .green {
     background-color: palegreen;
     border: 1px solid black;
+    margin-top: 2px;
 }
 
 .book_shelf > .book_list > .book_item > .action > .red {
     background-color: crimson;
     border: 1px solid black;
     color: white;
+    margin-top: 2px; 
 }
